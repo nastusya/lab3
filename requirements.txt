@@ -1,0 +1,6 @@
+SQLAlchemy
+flask
+Flask-SQLAlchemy
+psycopg2
+psycopg2-binary
+flask_compress

@@ -1,0 +1,27 @@
+{% extends "./layout.html" %}
+
+{% block title %}Edit user{% endblock %}
+
+{% block content %}
+                    <form class="profile-form profile-services" action="/edit-visitor/{{ visitor_id }}" autocomplete="off" method="POST">
+                        <div class="profile-form-group">
+                            <label for="InputSurname">first name</label>
+                            <input type="text" name="firstName" id="firstName" value="{{ first_name }}" placeholder="Enter first name...">
+                        </div>
+                        <div class="profile-form-group">
+                            <label for="InputName">last name</label>
+                            <input type="text" name="lastName" id="lastName" value="{{ last_name }}" placeholder="Enter last name...">
+                        </div>
+                        <div class="profile-form-group">
+                            <label for="InputGender">gender</label>
+                            <input type="text" name="gender" id="gender" value="{{ gender}}" placeholder="Enter gender...">
+                        </div>
+                        <div class="profile-form-group">
+                            <label for="InputEmail">email</label>
+                            <input type="text" name="email" id="email" value="{{ email }}" placeholder="Enter email...">
+                        </div>
+                        <div class="profile-form-group submit">
+                            <button type="submit">Update</button>
+                        </div>
+                    </form>
+{% endblock %}

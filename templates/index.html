@@ -1,0 +1,36 @@
+{% extends "./layout.html" %}
+
+{% block title %}Users{% endblock %}
+
+{% block content %}
+    <div class="profile-wrapper">
+
+                    <div class="profile-content-title"><span>Visitors list</span></div>
+                    <table class="profile-table">
+                        <tr class="profile-table-header">
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Surname</th>
+                            <th>Gender</th>
+                            <th>Email</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        {% for visitor in visitor_list %}
+                            <tr class="profile-table-row">
+                                <td>{{ visitor.visitor_id }}</td>
+                                <td>{{ visitor.name }}</td>
+                                <td>{{ visitor.surname}}</td>
+                                <td>{{ visitor.gender }}</td>
+                                <td>{{ visitor.email}}</td>
+                                <td>&nbsp;&nbsp;<a href="/remove-visitor/{{ visitor.visitor_id }}">X</a>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                <td><a href="/edit-visitor/{{ visitor.visitor_id }}">Edit</a></td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+
+{% endblock %}
+
+
+
